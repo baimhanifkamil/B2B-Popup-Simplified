@@ -75,7 +75,7 @@ img.responsive {
   
 
      .main .input-area {  
-        height:55vh;
+        height:70vh;
         width:70%;
         position:absolute;
         padding: 5%;
@@ -170,6 +170,7 @@ img.responsive {
     bottom: 0; }
 
 .button {
+font-family: 'FuturaStd-Heavy';
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
