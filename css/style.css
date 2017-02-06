@@ -22,7 +22,8 @@ form {
   src: url("../assets/fonts/AvenirLTStd-Roman.otf") format("opentype"); }
 body {
   position: relative;
-  font-family: "Avenir"; }
+  font-family: "Avenir";
+color: #909090;}
 
 .aside {
   display: block;
@@ -53,7 +54,6 @@ body {
         
           .aside{
               visibility: hidden;
-              background-color:black;
           }
              
           
