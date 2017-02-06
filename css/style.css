@@ -58,7 +58,9 @@ img.responsive {
   width: 70%;
   height: 100vh;
   margin-left: 30%;
-  overflow: hidden; }
+  overflow: hidden; 
+}
+  
 
      .main .input-area {  
         height:55vh;
@@ -68,16 +70,30 @@ img.responsive {
         text-align: center;
         top:50%;margin-top:-200px;
         left:15%;
+         z-index:5;
         
         }
 
-            .input-name, .input-email,.input-company, .input-phone, .input-task, .form-submit{
+            .main .input-name, .main .input-email, .main .input-company, .main .input-phone, .main .input-task, .main .form-submit{
+                
                 height:40px;
                 width: 100%;
                 border: 20px;
                 margin-top: 10px;
-                font-family:"Futura Std";
+                font-family:"FuturaStd-Heavy";
+                letter-spacing: 1px;
+                font-size: 15px;
+                padding-left: 20px;
+                border-radius: 4px;
+            
             }
+
+            .main .form-submit{
+                color:white;
+                padding-left: 0px;
+                background:#BBBEDA;
+                    
+                }
 
 
 
