@@ -1,0 +1,354 @@
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: FuturaStd-Heavy;
+  src: url("../fonts/FuturaStd-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: FuturaStd-Book;
+  src: url("../fonts/FuturaStd-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../fonts/AvenirLTStd-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Roman;
+  src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype");
+}
+
+body {
+  position: relative;
+  font-family: "FuturaStd-Heavy";
+}
+
+.aside {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  width: 300px;
+  padding: 50px;
+  left: 0;
+
+  .footer {
+    position: absolute;
+    bottom: 30px;
+    font-family: "FuturaStd-Heavy";
+  }
+
+  .animated-rocket {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+    .animated-rocket {
+      display: none;
+    }
+
+    .footer {
+      left: 0;
+      right: 0;
+      width: 80%;
+      margin: auto;
+    }
+      
+  }
+}
+
+img.responsive {
+  max-width: 100%;
+}
+
+button,
+.signup-button {
+  padding: .25em 0;
+  border: 0;
+  outline: 0;
+  background: $primary;
+  color: rgba(#fff, 0.85);
+  font-size: 2rem;
+  line-height: 3.6rem;
+  letter-spacing: .0625rem;
+  box-shadow: 0 3px 5px 1px rgba(#000, 0.25);
+  text-shadow: 0 -2px 0 rgba(#000, 0.25), 0 1px 0 rgba(#fff, 0.2);
+}
+
+
+.signup-button,
+.signup-button-trigger {
+  position: fixed;
+  top: 50%;
+//  left: 70%;
+  left: 50%;
+  // for mobile,left: 50%;
+  transform: translate(-50%, -100%);
+//  width: 40vw;
+  width: 70vw;
+  // for mobile,width: 70vw;
+  padding: .25rem 0;
+  line-height: 3.6rem;
+  text-align: center;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity .4s .3s;
+}
+
+.main {
+  display: block;
+  width: 70%;
+  height: 100vh;
+  margin-left: 30%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    height: 100vh;
+
+    .gradient-bg {
+      transform: rotate(90deg);
+      width: 100%;
+      margin-top: -120px;
+    }
+      
+//    .signup-button {
+//      width:100%;
+//    }  
+//     
+      
+    .signup-button, .signup-button-trigger {
+        left:50%;
+        width:70vw;
+    }
+
+    .label-text{
+        left:50%;
+        width:70vw;
+    }
+
+    input, button {
+        left:50%;
+        width:70vw;
+    }
+      
+  }
+
+  @media (max-width: 480px) {
+   .gradient-bg {
+      margin-top: -240px;
+    }
+  }
+}
+
+.brand {
+  .title {
+    color: #909090;
+    font-size: 18px;
+    font-family: "AvenirLTStd-Roman";
+    line-height: 21px;
+  }
+}
+
+.animated-rocket {
+  position: relative;
+
+  .rocket {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  background: #96cd91;
+  color: white;
+  padding: 1em;
+  letter-spacing: 0.15em;
+  transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+    color: #e6e6e6;
+  }
+
+  &.is-round {
+    border-radius: 5em;
+  }
+
+  &.is-block {
+    display: block;
+  }
+}
+
+.popup-button-group {
+  .button:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+$background: #484984;
+$dark: #484984;
+$primary: #96CD91;
+
+@for $i from 1 through 5 {
+  label[for="input-#{$i}"] .nav-dot {
+      margin-top: -150px + (25 * $i);
+  }
+}
+
+input, button {
+  font-family: "FuturaStd-Heavy";
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -300%);
+  display: block;
+  width: 50vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s cubic-bezier(.4, .25, .8, .3);
+}
+
+input {
+  padding: .25rem 0;
+  border: 0;
+  border-bottom: 1px solid $primary;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: .125rem;
+  transition: all .5s cubic-bezier(.4, .25, .8, .3);
+}
+
+input::selection {
+  background: rgba($primary, 0.25);
+}
+
+
+input:focus,
+button:focus {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+  transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+  z-index: 10;
+}
+
+input:focus ~ input,
+input:focus ~ button {
+  transform: translate(-50%, 500%);
+  transition: all .5s ease-in;
+}
+input:focus ~ label .label-text {
+  transform: translate(-50%, 300%);
+  transition: all .5s ease-in;
+}
+input:focus ~ .tip {
+  opacity: 1;
+}
+input:focus ~ .signup-button,
+button:focus ~ .signup-button {
+  opacity: 0;
+}
+
+input:focus + label .label-text {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+  transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+}
+input:focus + label .nav-dot:before {
+  background: darken($primary, 5%);
+  box-shadow: 0 0 0 .15rem $dark, 0 0 .05rem .26rem $primary;
+}
+
+.tip {
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  opacity: 0;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 300;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  text-align: right;
+  transition: opacity .25s .5s;
+}
+
+
+
+.signup-button-trigger {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.label-text {
+  position: fixed;
+  top: calc(50% - 4rem);
+  left: 60%;
+  transform: translate(-50%, -300%);
+  width: 50vw;
+  padding: 3.125rem 0 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: .125rem;
+  pointer-events: none;
+  transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+}
+
+.nav-dot {
+  cursor: pointer;
+  position: fixed;
+  padding: .625rem 1.25rem .625rem .625rem;
+  top: 52%;
+  right: 1.25rem;
+  &:before {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: .375rem;
+    height: .375rem;
+    margin-right: .625rem;
+    position: fixed;
+    background-color: lighten($background, 3%);
+    border: 0;
+    transition: all 0.25s;
+  }
+  &:hover:before {
+    width: .625rem;
+    height: .625rem;
+    margin-top: -.125rem;
+    margin-left: -.125rem;
+    background-color: darken($primary, 5%);
+  }
+}
