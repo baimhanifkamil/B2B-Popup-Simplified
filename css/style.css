@@ -152,11 +152,12 @@ img.responsive {
     .main .input-name, .main .input-email, .main .input-company, .main .input-phone, .main .input-task, .main .input-aboutus, .main .form-submit{
         height:34px;
         font-size: 13px;
+        margin-top: 7px;
                     
     }
     
     .main .gradient-bg {
-       margin-top: -280px;
+       margin-top: -290px;
     }
 
     
