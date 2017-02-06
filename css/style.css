@@ -75,7 +75,7 @@ img.responsive {
   
 
      .main .input-area {  
-        height:70vh;
+        
         width:70%;
         position:absolute;
         padding: 5%;
@@ -87,14 +87,14 @@ img.responsive {
         
         }
 
-            .main .input-name, .main .input-email, .main .input-company, .main .input-phone, .main .input-task, .main .form-submit{
+            .main .input-name, .main .input-email, .main .input-company, .main .input-phone, .main .input-task, .main .input-aboutus, .main .form-submit{
                 
                 height:40px;
                 width: 100%;
                 border: 20px;
                 margin-top: 10px;
-                font-family:"FuturaStd-Heavy";
-                letter-spacing: 1px;
+                font-family:'AvenirLTSTD-Roman';
+                letter-spacing: 0.2px;
                 font-size: 15px;
                 padding-left: 20px;
                 border-radius: 4px;
@@ -102,6 +102,7 @@ img.responsive {
             }
 
             .main .form-submit{
+                font-family:'AvenirLTSTD-Black';
                 color:white;
                 padding-left: 0px;
                 background:#BBBEDA;
@@ -128,7 +129,7 @@ img.responsive {
           
                 .main .input-area {
                     position:absolute;
-                    height:100vh;
+                    height:auto;
                     margin:-30vh auto;
                 }
                  form {
@@ -150,7 +151,7 @@ img.responsive {
         margin-top: -40px;
     }
     .main .input-area{
-        height:85vh;
+        height:60vh;
         }
     }
   }
