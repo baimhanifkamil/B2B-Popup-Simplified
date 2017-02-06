@@ -10,16 +10,16 @@ form {
 
 @font-face {
   font-family: FuturaStd-Heavy;
-  src: url("../fonts/FuturaStd-Heavy.otf") format("opentype"); }
+  src: url("../assets/fonts/FuturaStd-Heavy.otf") format("opentype"); }
 @font-face {
   font-family: FuturaStd-Book;
-  src: url("../fonts/FuturaStd-Book.otf") format("opentype"); }
+  src: url("../assets/fonts/FuturaStd-Book.otf") format("opentype"); }
 @font-face {
   font-family: AvenirLTStd-Black;
-  src: url("../fonts/AvenirLTStd-Black.otf") format("opentype"); }
+  src: url("../assets/fonts/AvenirLTStd-Black.otf") format("opentype"); }
 @font-face {
   font-family: AvenirLTStd-Roman;
-  src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype"); }
+  src: url("../assets/fonts/AvenirLTStd-Roman.otf") format("opentype"); }
 body {
   position: relative;
   font-family: "Avenir"; }
@@ -47,7 +47,19 @@ body {
         left: 0;
         right: 0;
         width: 80%;
-        margin: auto; } }
+        margin: auto; } 
+      
+      @media (max-height: 480px) {            
+        
+          .aside{
+              visibility: hidden;
+              background-color:black;
+          }
+             
+          
+      }
+
+    }
 
 img.responsive {
   max-width: 100%; }
@@ -71,6 +83,7 @@ img.responsive {
         top:50%;margin-top:-200px;
         left:15%;
          z-index:5;
+         
         
         }
 
@@ -96,6 +109,14 @@ img.responsive {
                 }
 
 
+@media (max-width: 480px) {
+      
+    .main .gradient-bg {
+       margin-top: -600px;
+      
+      }
+
+  }
 
   @media (max-width: 768px) {
     .main {
@@ -105,10 +126,29 @@ img.responsive {
       .main .gradient-bg {
         transform: rotate(90deg);
         width: 100%;
-        margin-top: -40px; } }
-  @media (max-width: 480px) {
-    .main .gradient-bg {
-      margin-top: -190px; } }
+        margin-top: -40px; }
+            @media (max-height: 480px) {
+                
+                .main {
+                    background: #4A4B86;
+                }
+          
+                .main .input-area {
+                    position:absolute;
+                    height:100vh;
+                    margin:-10vh auto;
+                }
+                 form {
+                     overflow:scroll;
+                }
+                 
+              
+         }
+      }
+
+  }
+
+  
 
 .brand .title {
   color: #909090;
