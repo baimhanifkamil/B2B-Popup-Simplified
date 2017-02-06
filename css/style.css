@@ -98,6 +98,7 @@ img.responsive {
                 font-size: 15px;
                 padding-left: 20px;
                 border-radius: 4px;
+                
             
             }
 
@@ -117,6 +118,7 @@ img.responsive {
       width: 100%;
       margin-left: 0;
       height: 100vh; }
+      
       .main .gradient-bg {
         transform: rotate(90deg);
         width: 100%;
@@ -132,6 +134,8 @@ img.responsive {
                     height:auto;
                     margin:-30vh auto;
                 }
+                
+                
                  form {
                      overflow-y:scroll;
                 }
@@ -144,15 +148,24 @@ img.responsive {
 
 @media (max-width: 480px) {
       
+          
+    .main .input-name, .main .input-email, .main .input-company, .main .input-phone, .main .input-task, .main .input-aboutus, .main .form-submit{
+        height:34px;
+        font-size: 13px;
+                    
+    }
+    
     .main .gradient-bg {
-       margin-top: -290px;
-      }
+       margin-top: -280px;
+    }
+
+    
     .brand {
         margin-top: -40px;
     }
     .main .input-area{
         height:60vh;
-        }
+    }
     }
   }
 
