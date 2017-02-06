@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/baimhanifkamil/pen/mRxpBY.
+Live Preview Here : https://baimhanifkamil.github.io/B2B-Popup-Simplified/
 
  
